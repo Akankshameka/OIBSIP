@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <meta content="width=device-width ,initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        body{
+            background-color: rgb(9, 9, 54);
+        }
+        .container{
+            width:100%;
+        }
+        .calculator{
+            background-color: rgb(9, 9, 54);
+            width:23.5%;
+            height:70%;
+            margin-left:35%;
+            margin-top: 15%;
+            border-radius: 10px;
+        }
+        form input{
+            width:70px;
+            height:70px;
+            cursor:pointe;
+        }
+        form #print{
+            display:flex;
+            justify-content: flex-end;
+            margin:20px 0;
+        }
+        form #print input{
+            text-align: right;
+            flex:1;
+            font-size:40px;
+        }
+        input{
+            background-color: rgb(7, 7, 54);
+            color:white;
+            font-size:20px;
+            border: 1px solid white;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div id="print">
+                        <input type="text" name="dis">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="dis.value= '' ">
+                        <input type="button" value="Del" onclick="dis.value=dis.value.toString().slice(0,-1) ">
+                        <input type="button" value="%" onclick="dis.value+= '%' ">
+                        <input type="button" value="/" onclick="dis.value+= '/' ">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="dis.value+='7' ">
+                        <input type="button" value="8" onclick="dis.value+='8' ">
+                        <input type="button" value="9" onclick="dis.value+= '9' ">
+                        <input type="button" value="*" onclick="dis.value+= '*' ">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="dis.value+='4' ">
+                        <input type="button" value="5" onclick="dis.value+='5' ">
+                        <input type="button" value="6" onclick="dis.value+= '6' ">
+                        <input type="button" value="-" onclick="dis.value+= '-' ">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="dis.value+='1' ">
+                        <input type="button" value="2" onclick="dis.value+='2' ">
+                        <input type="button" value="3" onclick="dis.value+= '3' ">
+                        <input type="button" value="+" onclick="dis.value+= '+' ">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="dis.value+= '00' ">
+                        <input type="button" value="0" onclick="dis.value+='0' ">
+                        <input type="button" value="." onclick="dis.value+= '.' ">
+                        <input type="button" value="=" onclick="dis.value=eval(dis.value)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
